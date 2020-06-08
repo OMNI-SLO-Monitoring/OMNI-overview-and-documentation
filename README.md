@@ -1,2 +1,7 @@
 # overview-and-documentation
-This repositories purpose is to give an overview of the developed system for monitoring and automated issue creation, as well as having a centralized Issue Management System for the development team.
+Ports used:
+
+Caching Service is on localhost:3300
+Monitor for Caching Service is on localhost:3400
+Database Service is on localhost:3000
+Monitor for Database Service is on localhost:3100
