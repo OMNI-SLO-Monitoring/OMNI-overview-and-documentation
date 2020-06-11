@@ -2,7 +2,7 @@ import { LogType } from "./LogType";
 
 export class LogMessageFormat {
   type: LogType;
-  time: String;
+  time: any;
   source: String;
   target: String;
 }
