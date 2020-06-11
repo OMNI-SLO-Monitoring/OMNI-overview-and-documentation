@@ -1,6 +1,6 @@
 export enum LogType {
-  Timeout = "TIMEOUT",
-  Cpu = "CPU",
-  Error = "ERROR",
-  CBOpen = "CBOPEN",
+  Timeout = "Timeout",
+  Cpu = "Cpu",
+  Error = "Error",
+  CBOpen = "CBOpen",
 }
