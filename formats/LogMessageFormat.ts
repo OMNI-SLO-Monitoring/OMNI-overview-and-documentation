@@ -1,5 +1,7 @@
+import { LogType } from "./LogType";
+
 export class LogMessageFormat {
-  type: String;
+  type: LogType;
   time: String;
   source: String;
   target: String;
