@@ -1,6 +1,6 @@
 import { LogType } from "./LogType";
 
-export class LogMessageFormat {
+export interface LogMessageFormat {
   type: LogType;
   time: number;
   source: String;
