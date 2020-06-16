@@ -6,4 +6,4 @@ CPU Monitor is at localhost:3100 <br />
 Price Service is at localhost:3300 <br />
 Price Service UI is at localhost:4300 <br />
 Monitor for Caching Service is at localhost:3400 <br />
-Issue Creator is at localhost:3500 
+Issue Creator/Log Receiver is at localhost:3500 
