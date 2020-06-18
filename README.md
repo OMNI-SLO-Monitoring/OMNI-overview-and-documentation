@@ -1,4 +1,11 @@
-# overview-and-documentation
+# Overview and Documentation
+
+Architecture Overview:
+
+
+![Architecture](https://github.com/ccims/overview-and-documentation/Architektur Gesamtsystem.jpg?raw=true)
+
+
 Ports used:
 
 Database Service is at localhost:3000 <br />
