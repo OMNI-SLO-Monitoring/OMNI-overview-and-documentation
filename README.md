@@ -2,9 +2,12 @@
 
 Architecture Overview:
 
-
 ![Architecture](https://github.com/ccims/overview-and-documentation/blob/201086cdd8b39eaadf9c90d7556d7a0a6c85a76e/Architektur%20Gesamtsystem.jpg?raw=true)
 
+
+Taxonomy Issues:
+
+![Taxonomie](https://github.com/ccims/overview-and-documentation/blob/master/issue_taxonomy/Issue%20Taxonomy.jpg?raw=true)
 
 Ports used:
 
