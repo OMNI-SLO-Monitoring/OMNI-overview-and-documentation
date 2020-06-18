@@ -3,7 +3,7 @@
 Architecture Overview:
 
 
-![Architecture](https://github.com/ccims/overview-and-documentation/Architektur Gesamtsystem.jpg?raw=true)
+![Architecture](Architektur Gesamtsystem.jpg)
 
 
 Ports used:
