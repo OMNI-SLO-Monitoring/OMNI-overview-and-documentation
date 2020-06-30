@@ -1,4 +1,4 @@
-#Branching Model
+# Branching Model
 
 1. Es gibt pro Repositorie **zwei** permanente Zweige *master* und *dev*.
 
