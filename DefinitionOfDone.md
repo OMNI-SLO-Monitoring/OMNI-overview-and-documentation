@@ -1,10 +1,10 @@
 # Definition of Done
 
-- [ ] Alles was public ist, ist doucumentiert.
+- [ ] Alles was public ist, ist dokumentiert.
 - [ ] große Methoden sind dokumentiert. 
 - [ ] es existieren Unit Tests. 
 
-## Pull Request Template
+## Branching Model
 
-[Merge Request Template](./Branching_Model.md) 
+[Brnching Model](./Branching_Model.md) 
 
