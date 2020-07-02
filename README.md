@@ -17,3 +17,9 @@ Price Service UI is at localhost:4300 <br />
 Monitor for Caching Service is at localhost:3400 <br />
 Issue Creator/Log Receiver is at localhost:3500 <br />
 Combined Monitoring Frontend is at localhost:4200 <br />
+
+## Documentation
+
+- [Definition of Done](definition-of-done.md)
+- [Branching Model](./Branching_Model.md) 
+
