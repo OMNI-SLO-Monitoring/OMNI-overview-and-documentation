@@ -22,4 +22,5 @@ Combined Monitoring Frontend is at localhost:4200 <br />
 
 - [Definition of Done](definition-of-done.md)
 - [Branching Model](./Branching_Model.md) 
-
+- [Up-to-date Architecture Overview](https://miro.com/app/board/o9J_kqtmf3c=/)
+- [Current Taxonomy](https://miro.com/app/board/o9J_ktxAhs4=/)
