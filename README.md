@@ -8,6 +8,13 @@ Architecture Overview:
 ![Taxonomy](https://github.com/ccims/overview-and-documentation/blob/master/issue_taxonomy/Issue%20Taxonomy.jpg?raw=true)
 
 
+UML Class Diagram for Class LogType:
+![UMLClass](https://github.com/ccims/overview-and-documentation/blob/master/UML%20Class%20Diagram.png?raw=true)
+
+
+UML Object Diagram:
+![UMLObject](https://github.com/ccims/overview-and-documentation/blob/master/UML%20Object%20Diagram.png?raw=true)
+
 Ports used:
 
 Database Service is at localhost:3000 <br />
