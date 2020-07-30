@@ -1,7 +1,7 @@
 # Overview and Documentation
 
 Architecture Overview:
-![Architecture](https://github.com/ccims/overview-and-documentation/blob/master/Architektur%20Gesamtsystem.jpg?raw=true)
+![Architecture](https://github.com/ccims/overview-and-documentation/blob/master/Architektur%20Gesamtsystem%20Aktuell.jpg?raw=true)
 
 
 'Issue' Taxonomy:
