@@ -15,6 +15,7 @@ UML Class Diagram for Class LogType:
 UML Object Diagram:
 ![UMLObject](https://github.com/ccims/overview-and-documentation/blob/master/UML%20Object%20Diagram.png?raw=true)
 
+
 Ports used:
 
 Database Service is at localhost:3000 <br />
