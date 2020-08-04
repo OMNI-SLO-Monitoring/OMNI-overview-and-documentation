@@ -16,15 +16,19 @@ UML Object Diagram:
 
 
 Ports used:
+ 
+    Frontend: 
+    Database Service UI is at localhost:4000 
+    Account Service UI is at localhost:4100 
+    Price Service UI is at localhost:4300 
+    Combined Monitoring Frontend is at localhost:4200
 
-Database Service is at localhost:3000 <br />
-Database Service UI is at localhost:4000 <br />
-Price Service is at localhost:3300 <br />
-Price Service UI is at localhost:4300 <br />
-Account Service UI is at localhost:4100 <br />
-Monitor for Caching Service is at localhost:3400 <br />
-Issue Creator/Log Receiver is at localhost:3500 <br />
-Combined Monitoring Frontend is at localhost:4200 <br />
+    Backend:
+    Database Service is at localhost:3000 
+    Price Service is at localhost:3300
+    Response Monitor Service is at localhost:3400 
+    CPU Monitor Service is at localhost:3100
+    Issue Creator/Log Receiver is at localhost:3500
 
 ## Documentation
 
