@@ -1,5 +1,8 @@
 # How to setup & use config for service 
 
+
+## Nest:
+
 1. Copy .env file into root directory of your service (.env file can be found in this folder). File includes default configurations for every service of the system (Service Ids and URLs).
 
     ```
@@ -29,3 +32,23 @@
     Second parameter of the _get()_ method is an optional default value in case the filed does not exist in the configuration file. 
 
 7. Congratulations: You have made it!
+
+## Angular:
+
+Temporary solution: Put all necessary environment variables into the environment.ts folder which can be found under src/environment. 
+
+```
+  BACKEND_DB_SERVICE_URL: "http://localhost:3000/",
+  BACKEND_PRICE_SRVICE_URL: "http://localhost:3300/",
+  BACKEND_RESPONSE_MONITOR_URL: "http://localhost:3400/",
+  BACKEND_CPU_MONITOR_URL: "http://localhost:3100/",
+  BACKEND_ISSUE_CREATOR_URL: "http://localhost:3500/",
+
+  FRONTEND_DB_SERVICE_URL: "http://localhost:4000/",
+  FRONTEND_PRICE_SERVICE_URL: "http://localhost:4300/",
+  FRONTEND_ACCOUNT_SERVICE_URL: "http://localhost:4100/",
+  FRONTEND_MONITORING_SERVICE_URL: "http://localhost:4200/",
+```
+
+Whether a .env file should be inserted via a script will be discussed for future sprints. 
+
