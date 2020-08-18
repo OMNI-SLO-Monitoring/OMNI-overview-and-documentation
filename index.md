@@ -1,6 +1,9 @@
 ## Issue-Creating Monitoring for SLA-driven Issue Management System
 
-#### Introduction
+### Introduction
+This User Manual provides an elaborate insight into the Issue-Creating Monitoring of the SLA-driven Issue Management System and the entire environment built around it. Elucidations of the functionality and purpose of the individual components are located in their dedicated chapters. 
+
+#### Fundamentals
 The Issue-Creating Monitoring System aims to detect errors in a microservice architecture and subsequently creates issues, characterizing very detailed the undesired behaviour. These issues are thereupon sent to a predefined API to be further processed and evaluated. 
 
 This system dissected into its modular components comprises **two monitors** which produce and send logs corresponding to the observed errors, an **issue creator** that retrieves logs from the **message queue** and conducts a conversion into issues and a message queue responsible for the reception of logs from the monitors. In order to probe the system in an apt environment, we have set up various services that interact with requests as well as responses and additionally bear the capability of deliberately simulate malfunctioning behaviour. It is crucial to mention that the communication among services and between services and monitors is based upon HTTP. 
