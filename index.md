@@ -34,7 +34,7 @@ The monitors represent the core of the Monitoring System. Viewed as an aggregate
 #### 2.2.2 Error-Response Monitor
 
 ### 2.3 Issue Creation 
-7´'?=(  ^1he Issue Creator component in combination with the message queue realize the module accounting for the issue creation in the system. Dequeueing logs from the message queue, the Issue Creator converts them into issues and dispatches them.
+The Issue Creator component in combination with the message queue realize the module accounting for the issue creation in the system. Dequeueing logs from the message queue, the Issue Creator converts them into issues and dispatches them.
 
 #### 2.3.1 Message Queue
 
