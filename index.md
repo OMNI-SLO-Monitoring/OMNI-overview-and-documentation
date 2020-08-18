@@ -1,37 +1,10 @@
-## Welcome to GitHub Pages
+## Issue-Creating Monitoring for SLA-driven Issue Management System
 
-You can use the [editor on GitHub](https://github.com/ccims/overview-and-documentation/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+#### Introduction
+The Issue-Creating Monitoring System aims to detect errors in a microservice architecture and subsequently creates issues, characterizing very detailed the undesired behaviour. These issues are thereupon sent to a predefined API to be further processed and evaluated. </br>
+This system dissected into its modular components comprises **two monitors** which produce and send logs corresponding to the observed errors, an **issue creator** that retrieves logs from the **message queue** and conducts a conversion into issues and a message queue responsible for the reception of logs from the monitors. In order to probe the system in an apt environment, we have set up various services that interact with requests as well as responses and additionally bear the capability of deliberately simulate malfunctioning behaviour. It is crucial to mention that the communication among services and between services and monitors is based upon HTTP. </br>
+The monitoring process in and of itself adopts common monitoring techniques such as pulse checking, heartbeat reception and end-to-end checking. 
+Pulse checking is realized by the CPU-Tracking Monitor which queries the cpu utilization of registered services whereas heartbeat reception is performed by the Error Response Monitor that receives reported errors from services during service communication. End-to-end checks are realized by the latter service as well, in which the Database Service in particular can be tested through purposeful inquiring of its functionality. As briefly touched on before, error observations are formed to logs containing necessary detail for thorough comprehension of the unwanted behaviour and sent to the message queue. The Issue Creator extracts logs from the message queue and converts them into issues that satisfy a predefined Issue Format. From there on, issues are dispatched to the API of a separate constituent of the Issue Management System and are exposed to further assessment and processing.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+[Gh_pages_format](https://ccims.github.io/overview-and-documentation/Gh_pages_format)
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ccims/overview-and-documentation/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
