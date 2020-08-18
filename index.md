@@ -21,6 +21,7 @@ The Monitoring Environment in its entirety is composed of the Issue-Creating Mon
 The three services form the periphery of the central Monitoring System. They possess the ability to interact with each other by sending requests and responses through HTTP  and are chiefly designed to establish a tangible deployment environment for the Monitoring System. Hence, failure in behaviour can be elicited with selected services to examine the Monitoring System.
 
 #### 2.1.1 Database Service
+See [Database Service Chapter](https://ccims.github.io/overview-and-documentation/database-service)
 
 #### 2.1.1 Price Service
 
