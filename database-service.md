@@ -12,7 +12,7 @@ The Database Service comprises a frontend and backend component. It is advised t
 ## Pictures
 
 The Database Service UI:
-![DatabaseServiceUI](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/databaseserviceui.PNG)
+![DatabaseServiceUI](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/databaseserviceui.PNG?raw=true)
 
 ## Functionalities
 The functionality of the Database Service can be split up into two parts: The provision of endpoints from which defined values can be retrieved as responses for HTTP requests and the feature enabling adjustments of the responses, including response time, response type - successful or erroneous - as well as semantical correctness.
