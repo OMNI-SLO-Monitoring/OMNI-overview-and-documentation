@@ -4,7 +4,7 @@ Add general description of service first, like what the service does, what part 
 
 ## Installation and setup
 
-Dont't put a full instalation guide here, rather link to the installation guide in the readme. 
+Dont't put a full installation guide here, rather link to the installation guide in the readme. 
 There should be information on everything that has to be installed in order for the service to fully function (e.g. DB-service should be installed for the price-service to work).
 
 ## Pictures
