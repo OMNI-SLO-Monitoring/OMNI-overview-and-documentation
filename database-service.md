@@ -11,7 +11,7 @@ The Database Service comprises a frontend and backend component. It is advised t
 
 ## Pictures
 
-The Database Service UI:
+The User Interface of the Database Service
 ![DatabaseServiceUI](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/databaseserviceui.PNG?raw=true)
 
 ## Functionalities
