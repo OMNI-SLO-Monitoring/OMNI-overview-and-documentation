@@ -5,13 +5,13 @@ Requests sent to the Price Service are also transferred to the Database Service.
 
 ## Installation and setup
 
-Follow the [installation steps](https://github.com/ccims/account-service) given in the Github Repository of the Account Service. Furthermore, the backend of the Database Service and the Price Service should also be installled and run in order to use all functionalities of the Account Service.
-If errors are detected the Account service will automatically try to send these to the Monitoring System, so make sure that the Error Response Service of the Monitoring System is also running if you want to save these errors in form of Log Messages. 
+Follow the [installation steps](https://github.com/ccims/account-service) given in the Github Repository of the Account Service and open the front Page of the Account Serivce on your browser (with default configurations the Account Service sits on [localhost:4100](http://localhost:4100/)). Furthermore, the backend of the Database Service and the Price Service should also be installled and running in order to use all functionalities of the Account Service. \
+If errors are returned the Account service will automatically try to send reports to the Monitoring System, so make sure that the [Error Response Service](https://github.com/ccims/error-response-monitoring-service) of the Monitoring System is also running if you want to detect these errors in form of Log Messages. 
 
 ## Structure
 
-Screenshots of the service's frontend to show how the service looks like overall. 
-Like this: 
+Account Service UI:
+
 ![Account Service](https://github.com/ccims/account-service/blob/dev/documentation/Pics/Account_Service_full.PNG?raw=true)
 
 ## Functionalities
@@ -20,8 +20,8 @@ The Account service is able to send different http GET requests to the Database-
 
 ### 1. Sending requsts to Database Service
 
-To send requests to the Database Service, select the Database service in the _Request Destination_ field. The request type can also be selected in the field below. \
-By clicking the _Send Request_ button the request will now be sent to the URL of the database service.
+To send requests to the Database Service, select the Database service in the **Request Destination** field. The request type can also be selected in the field below. \
+By clicking the **Send Request** button the request will now be sent to the URL of the database service.
 
 ![Account service DB config](https://github.com/ccims/account-service/blob/dev/documentation/Pics/Account_Service_DB_config.PNG?raw=true)
 
@@ -35,8 +35,8 @@ If the request fails the failed response is highlighted red. The Account service
 
 ### 2. Sending requests to Price Service
 
-Sending requests to the Price Service works, in it's core, very similarly to the requests to the Database Service. Note that requests sent to the Price Service are transferred to the Database Service. Hence, the same results can be expected when sending requests to the Price Service or the Database Service. As explained in the section above this approach was implemented to simulate a chain request. \
-Select the Price Service in the _Request Destination_ and the type of request in the _Choose Request_ field. 
+Sending requests to the Price Service works, in it's core, very similarly to requests sent to the Database Service. Note that requests sent to the Price Service are transferred to the Database Service. Hence, the same results can be expected when sending requests to the Price Service or the Database Service. As explained in the section above this approach was used to simulate a chain request. \
+Select the Price Service in the **Request Destination** and the type of request in the **Choose Request** field. 
 
 ![Account Service](https://github.com/ccims/account-service/blob/dev/documentation/Pics/Account_Service_Price_config.PNG?raw=true)
 
