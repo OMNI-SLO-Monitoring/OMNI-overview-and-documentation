@@ -29,6 +29,7 @@ Ports used:
     Response Monitor Service is at localhost:3400 
     CPU Monitor Service is at localhost:3100
     Issue Creator/Log Receiver is at localhost:3500
+    Prometheus Alertmessage Converter is at localhost:3900
 
 ## Documentation
 
