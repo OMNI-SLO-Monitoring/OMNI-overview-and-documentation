@@ -26,6 +26,7 @@ See [Database Service Chapter](https://ccims.github.io/overview-and-documentatio
 #### 2.1.1 Price Service
 
 #### 2.1.1 Account Service
+See [Account Service Chapter](https://ccims.github.io/overview-and-documentation/account-service)
 
 ### 2.2 Monitors 
 The monitors represent the core of the Monitoring System. Viewed as an aggregate, the system utilizes different monitoring techniques to detect erroneous behaviour of the services. 
