@@ -55,8 +55,16 @@ Once up and running on localhost:3000, the Database Service backend exposes vari
 The interface of the Database Service renders the adjustment features which encompass the response type, the semantical correct of the response, the response time or response delay and lastly the simulated cpu utilization. Whereas the response time applies to all endpoints, the response type is particular for those endpoints whose descriptions explicitly state the effects of the types. Analogously, the semantical correctness too is particular to the endpoints that describe the corresponding response in their description. 
 
 The two checkboxes allow the user to set their desired response type and semantical correctness. A ticked checkbox implies the successful response type/semantical correctness. Conversely, an empty checkbox denotes the erroneous response type/semantical incorrectness. \
+
+![DatabaseServiceUICheckboxes](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/checkbox_databaseservice.PNG?raw=true)
+
 The simulated CPU utilization value as well as the response time can be specified in their respective input fields. \
+
+![DatabaseServiceUIInputField](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/input_databaseservice.PNG?raw=true)
+
 The changes are applied once the "Apply" button is clicked.
+
+![DatabaseServiceUIApplyButton](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/apply_databaseservice.PNG?raw=true)
 
 ## Additional Information
 
