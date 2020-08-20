@@ -6,7 +6,7 @@ The Database Service mimics an actual database in the simplest form in which fix
 
 The Database Service comprises a frontend and backend component. It is advised to run both the frontend and backend at the same time to facilitate and update the adjustment of the responses. 
 
-[How to set up Database Service backend](https://github.com/ccims/database-service/blob/dev/database-service/README.md) </br>
+[How to set up Database Service backend](https://github.com/ccims/database-service/blob/dev/database-service/README.md) \
 [How to set up Database Service frontend](https://github.com/ccims/database-service/blob/dev/database-serviceui/README.md)
 
 ## Pictures
