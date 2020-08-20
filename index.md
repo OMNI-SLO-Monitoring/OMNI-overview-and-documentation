@@ -24,6 +24,7 @@ The three services form the periphery of the central Monitoring System. They pos
 See [Database Service Chapter](https://ccims.github.io/overview-and-documentation/database-service)
 
 #### 2.1.1 Price Service
+See [Price Service Chapter](https://ccims.github.io/overview-and-documentation/price-service)
 
 #### 2.1.1 Account Service
 See [Account Service Chapter](https://ccims.github.io/overview-and-documentation/account-service)
