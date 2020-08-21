@@ -32,6 +32,7 @@ See [Account Service Chapter](https://ccims.github.io/overview-and-documentation
 The monitors represent the core of the Monitoring System. Viewed as an aggregate, the system utilizes different monitoring techniques to detect erroneous behaviour of the services. 
 
 #### 2.2.1 CPU-Tracking Monitor
+See [CPU Tracking Monitoring Service Chapter](https://ccims.github.io/overview-and-documentation/cpu-tracking-monitor)
 
 #### 2.2.2 Error-Response Monitor
 
