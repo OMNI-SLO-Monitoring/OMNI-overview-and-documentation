@@ -1,21 +1,24 @@
 # CPU-utilization-observer 
 
+The CPU-utilization-observer is an importable module and is used to fetch the cpu value and a simulated value by accessing a port that is created by this module.
+
 ## Installation and Setup
-
-## Pictures
-
-Screenshots of the service's frontend to show how the service looks like overall. 
-Like this: 
-![Architecture](https://github.com/ccims/overview-and-documentation/blob/master/Architektur%20Gesamtsystem%20Aktuell.jpg?raw=true)
+[How to set up the CPU-utilization-observer](https://github.com/ccims/cpu-utilization-observer) 
 
 ## Functionalities
 
-Detailed description of every functionality here (every button, input field, ...). Add more screeenshots of detailed parts to illustrate which part of the service is explained.
+The main feature of the CPU-utilization-observer is to create a port on /cpu to fetch the real cpu value and cpu/simulated to fetch a simulated,  hardcoded value. The ports will be available at 'http://hostname/cpu' or 'http://hostname/cpu/simulated' 
 
-### Functionality 1
+#### GET endpoints created:
+* **/cpu** \
+  Successful response type:  Returns a the real, current CPU value. \
+  Erroneous response type: Rejects the request.
+  
+* **/cpu/simulated** \
+  Successful response type: Returns a fixed simulated CPU value. \
+  Erroneous response type: Rejects the request.
 
-### Fucntionality 2
 
 ## Additional Information
 
-If there is any further information that should be included in the documentation of the service add it here. 
+In our Project the module is currently only in use for the [CPU Monitor backend](https://github.com/ccims/CPU-tracking-monitoring-service) to scrape the cpu value. But this module can be used in different Backends as well to get the (simulated) CPU value.
