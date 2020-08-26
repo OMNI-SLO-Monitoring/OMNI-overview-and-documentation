@@ -25,6 +25,7 @@ The Issue Creator can receive incoming logs and save them in a mongo Database. I
 Endpoint for sending the Log Message \
   Successful response: Returns: "Received!" and the received API response on the console\
   Erroneous response: Rejects the request.
+  
 ### 2. Creating an Issue and sending it to the API
 Out of the incoming log, the issue creator creates an Issue in the [issue format]( https://github.com/ccims/issue-creator/blob/dev/src/IssueFormat.ts) provided by the [graphql schema](https://github.com/ccims/ccims-backend/blob/schemas/schemas/schema.graphql) . The Issue contains all the information of the Log message and is send to the API by the Issue Creator. If the request was successful it receives an Issue ID from the API which can be assigned to the associated log. 
 
