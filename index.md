@@ -37,6 +37,8 @@ See [CPU Tracking Monitoring Service Chapter](https://ccims.github.io/overview-a
 
 #### 2.2.2 Error-Response Monitor
 
+See [Error Response Monitoring Service Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor)
+
 ### 2.3 Issue Creation 
 The Issue Creator component realizes the module accounting for the issue creation in the system. Dequeueing logs from the message queue and storing them in the database, the Issue Creator converts them into issues and dispatches them. Here, the Log Table visually renders the logs residing in the database of the Issue Creator after retrieval from the message queue.
 
