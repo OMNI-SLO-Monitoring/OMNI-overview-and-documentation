@@ -43,7 +43,7 @@ See [Error Response Monitoring Service Chapter](https://ccims.github.io/overview
 The Issue Creator component realizes the module accounting for the issue creation in the system. Dequeueing logs from the message queue and storing them in the database, the Issue Creator converts them into issues and dispatches them. Here, the Log Table visually renders the logs residing in the database of the Issue Creator after retrieval from the message queue.
 
 #### 2.3.1 Issue Creator
-
+See [Issue-Creator Chapter](https://github.com/ccims/overview-and-documentation/blob/gh-pages/issue-creator.md)
 #### 2.3.2 Log Table
 
 [Gh_pages_format](https://ccims.github.io/overview-and-documentation/Gh_pages_format)
