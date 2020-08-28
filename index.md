@@ -47,7 +47,11 @@ The Issue Creator component realizes the module accounting for the issue creatio
 
 #### 2.3.1 Issue Creator
 See [Issue-Creator Chapter](https://ccims.github.io/overview-and-documentation/issue-creator)
+#### 2.3.2 Formats
+##### 2.3.2.1 Log Message Format
+See [Log Message Format](https://github.com/ccims/logging-message-format/blob/dev/src/logging-message-format.ts)
+##### 2.3.2.2 Error Format
+See [Error Format](https://github.com/ccims/logging-message-format/blob/dev/src/error-format.ts)
 #### 2.3.2 Log Table
 
-[Gh_pages_format](https://ccims.github.io/overview-and-documentation/Gh_pages_format)
 
