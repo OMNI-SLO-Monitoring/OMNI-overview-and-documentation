@@ -56,7 +56,9 @@ The interface of the Database Service renders the adjustment features which enco
 
 The two checkboxes allow the user to set their desired response type and semantical correctness. A ticked checkbox implies the successful response type/semantical correctness. Conversely, an empty checkbox denotes the erroneous response type/semantical incorrectness. \
 
-![DatabaseServiceUICheckboxes](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/checkbox_databaseservice.PNG?raw=true)
+![DatabaseServiceUI ResponseType Checkbox](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/response_success_control.PNG?raw=true)
+
+![DatabaseServiceUI SemanticalCorrectness Checkbox](https://github.com/ccims/database-service/blob/dev/database-serviceui/documentation/semantical_correctness_control.PNG?raw=true)
 
 The simulated CPU utilization value as well as the response time can be specified in their respective input fields. \
 
