@@ -45,7 +45,7 @@ After confirming the selection of the request type, the user can execute the req
 
 
 The outcome of the request is rendered in the "Output" section. Based on the response settings of the Database Service and the circuit breaker settings of the Price Service, the request can either be a success or a failure. In both cases, a feedback is provided to the user visually and if response data is fetched, it is displayed too. \
-If a request fails, the Price Service additionally sends a report to the Error-Response Monitor stating the details of the failure.
+If a request fails, the Price Service additionally sends a report which conforms the [Error Format](https://github.com/ccims/logging-message-format/blob/dev/src/error-format.ts) to the Error-Response Monitor stating the details of the failure.
 
 ![Successful Request](https://github.com/ccims/price-service/blob/dev/documentation/SuccessfulRequest.PNG?raw=true)
 ![Failed Request](https://github.com/ccims/price-service/blob/dev/documentation/FailedRequestLarge.PNG?raw=true)
