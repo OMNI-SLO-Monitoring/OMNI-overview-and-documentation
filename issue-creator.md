@@ -27,6 +27,7 @@ Endpoint for sending the Log Message \
   Erroneous response: Rejects the request.
   
 ### 2. Creating an Issue and sending it to the API
+The Issue Creator encompasses a Log Receiver component which upon initialisation connects to the Kafka Queue described in the [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor) and subscribes to the the topic of "logs" under which all logs are classified. Taking on the role as a consumer, it will then consistently retrieve existing logs of the Kafka Queue. 
 Out of the incoming log, the issue creator creates an Issue in the [issue format]( https://github.com/ccims/issue-creator/blob/dev/src/IssueFormat.ts) provided by the [graphql schema](https://github.com/ccims/ccims-backend/blob/schemas/schemas/schema.graphql) . The Issue contains all the information of the Log message and is send to the API by the Issue Creator. If the request was successful it receives an Issue ID from the API which can be assigned to the associated log. 
 
 ### 3. Saving the Logs in a database
