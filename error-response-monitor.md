@@ -75,7 +75,7 @@ If the returned status code matches the expected one the response body will be s
 ![Error Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_POST_log.PNG?raw=true)
 
 ## 3. Kafka Queue
-As mentioned before, the Error-Response Monitor writes log messages into a Kafka Queue which is directly coupled to be Monitor itself meaning the Kafka Queue is defined and specified in the Error-Response Monitor and is additionally started with the Monitor upon using Docker Compose. localhost:9092 is the respective url the Kafka Queue. Hence the Error-Response Monitor takes on the role of a producer that writes the log messages into the Kafka Queue which thereupon are consumed by the Issue Creator. There is one Kafka broker across the Monitoring Environment that specifically is responsible to accommodate these log messages. Correspondingly, all log messages are classified under the topic of "logs".
+As mentioned before, the Error-Response Monitor writes logs into a Kafka Queue which is directly coupled to be Monitor itself meaning the Kafka Queue is defined and specified in the Error-Response Monitor and is additionally started with the Monitor upon using Docker Compose. localhost:9092 is the respective url the Kafka Queue. Hence the Error-Response Monitor takes on the role of a producer that writes the logs into the Kafka Queue which thereupon are consumed by the Issue Creator. There is one Kafka broker across the Monitoring Environment that specifically is responsible to accommodate these logs. Correspondingly, all logs are classified under the topic of "logs".
 
 ## Additional Information
 
