@@ -17,7 +17,7 @@ Example: [cpu-utilization-observer](https://github.com/ccims/cpu-utilization-obs
 2. install the following dependencies and dev dependencies
 
 ```
-    npm install @nest/common rxjs reflect-metadata
+    npm install @nestjs/common rxjs reflect-metadata
     npm install -d @types/node rimraf typescript
 ```
 
@@ -40,6 +40,7 @@ Example: [cpu-utilization-observer](https://github.com/ccims/cpu-utilization-obs
 6. Add following code to `tsconfig.json`
 
 ```
+   { 
     "compilerOptions": {
         "experimentalDecorators": true,
         "target": "es2017",
