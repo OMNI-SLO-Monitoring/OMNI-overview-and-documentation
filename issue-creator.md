@@ -5,6 +5,7 @@ The Issue Creator can receive incoming logs and save them in a mongo Database. I
 ## Installation and Setup
 [How to set up the Issue Creator](https://github.com/ccims/issue-creator/blob/dev/README.md) \
 [Sandro's API](https://github.com/ccims/ccims-backend/tree/apiMockup) has to run in order to assign an Issue ID (currently the mock up). If logs are send to the issue creator without it running, the log will be saved without the issue ID.
+It is also crucial to mention that the Issue Creator works only in conjunction with the Kafka Queue which is in turn coupled to the Error-Response Monitor, meaning the Error-Response Monitor must be up and running with the Kafka Queue, achievable by using Docker compose (for more see [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor)) alongside the Issue Creator. They are hence important dependencies of the Issue Creator for it automatically connects to the Kafka Queue and consumes the content upon initialization.
 
 
 ## Functionalities
@@ -27,7 +28,7 @@ Endpoint for sending the Log Message \
   Erroneous response: Rejects the request.
   
 ### 2. Creating an Issue and sending it to the API
-The Issue Creator encompasses a Log Receiver component which upon initialisation connects to the Kafka Queue described in the [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor) and subscribes to the the topic of "logs" under which all logs are classified. Taking on the role as a consumer, it will then consistently retrieve existing logs of the Kafka Queue. 
+The Issue Creator encompasses a Log Receiver component which upon initialisation connects to the Kafka Queue described and intialized in the [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor) and subscribes to the the topic of "logs" under which all logs are classified. Taking on the role as a consumer, it will then consistently retrieve existing logs of the Kafka Queue. 
 Out of the incoming log, the issue creator creates an Issue in the [issue format]( https://github.com/ccims/issue-creator/blob/dev/src/IssueFormat.ts) provided by the [graphql schema](https://github.com/ccims/ccims-backend/blob/schemas/schemas/schema.graphql) . The Issue contains all the information of the Log message and is send to the API by the Issue Creator. If the request was successful it receives an Issue ID from the API which can be assigned to the associated log. 
 
 ### 3. Saving the Logs in a database
