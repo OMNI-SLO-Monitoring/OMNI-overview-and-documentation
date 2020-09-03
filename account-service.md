@@ -4,8 +4,10 @@ The Account service is part of the monitoring environment and is used to Send re
 Requests sent to the Price Service are also transferred to the Database Service. The reason behind this implementation was to provide a chain request where the http request is traveling through multiple services. In case one service is malfunctioning in such a chain request, multiple services would send errors to the monitoring system. With the account service this behaviour can be simulated and can be used to seee how the monitoring system deals with these multi-errors. 
 
 ## Installation and setup
-
-Follow the [installation steps](https://github.com/ccims/account-service) given in the Github Repository of the Account Service and open the front Page of the Account Serivce on your browser (with default configurations the Account Service sits on [localhost:4100](http://localhost:4100/)). Furthermore, the backend of the Database Service and the Price Service should also be installled and running in order to use all functionalities of the Account Service. \
+The Account Service consists of a frontend and a backend component.
+Follow the frontend [installation steps](https://github.com/ccims/account-service/blob/dev/frontend/README.md) given in the Github Repository of the Account Service (with default configurations the Account Service sits on [localhost:4100](http://localhost:4100/)). 
+The backend [installation steps](https://github.com/ccims/account-service/blob/dev/account-service-backend/README.md) can also be found in Github Repository of the Account Service. The backend is located at [localhost:3200](http://localhost:3200/)).
+Furthermore, the backend of the Database Service and the Price Service should also be installed and running in order to use all functionalities of the Account Service. \
 If errors are returned the Account service will automatically try to send reports to the Monitoring System, so make sure that the [Error Response Service](https://github.com/ccims/error-response-monitoring-service) of the Monitoring System is also running if you want to detect these errors in form of Log Messages. 
 
 ## Structure
@@ -16,7 +18,7 @@ Account Service UI:
 
 ## Functionalities
 
-The Account service is able to send different http GET requests to the Database-service as well as the Price-service. The responses of the respective http request is then shown on on screen. In case the Database- or the Price Service is not available an error is returned. In this case the Account service will send an error report to the monitoring system, given that the latter is also running. 
+The Account service is able to send different http GET requests to the Database-service as well as the Price-service using its backend. The responses of the respective http request is then shown on on screen. In case the Database- or the Price Service is not available an error is returned. In this case the Account service will send an error report to the monitoring system, given that the latter is also running. 
 
 ### 1. Sending requsts to Database Service
 
@@ -35,7 +37,7 @@ If the request fails the failed response is highlighted red. The Account service
 
 ### 2. Sending requests to Price Service
 
-Sending requests to the Price Service works, in it's core, very similarly to requests sent to the Database Service. Note that requests sent to the Price Service are transferred to the Database Service. Hence, the same results can be expected when sending requests to the Price Service or the Database Service. As explained in the section above this approach was used to simulate a chain request. \
+Sending requests to the Price Service works, in its core, very similarly to requests sent to the Database Service. Note that requests sent to the Price Service are transferred to the Database Service. Hence, the same results can be expected when sending requests to the Price Service or the Database Service. As explained in the section above this approach was used to simulate a chain request. \
 Select the Price Service in the **Request Destination** and the type of request in the **Choose Request** field. 
 
 ![Account Service](https://github.com/ccims/account-service/blob/dev/documentation/Pics/Account_Service_Price_config.PNG?raw=true)
