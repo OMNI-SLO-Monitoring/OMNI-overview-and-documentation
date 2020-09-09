@@ -34,6 +34,7 @@ Out of the incoming log, the issue creator creates an Issue in the [issue format
 ### 3. Service Monitoring Selection
 In addition to the provision of the Log Table, the [Monitoring Frontend](https://github.com/ccims/monitoring-frontend) encompasses a service registration or service selection view which allows the user to add services they would like to have monitored. These services are then inserted into the MongoDB database of the Issue Creator with their URL being their corresponding ID. After retrieving a log from the Kafka Queue, the Issue Creator will then assess with the informtion provided in the log whether or not the service which the log pertains to is already registered or not. Logs from unregistered services will not be processed whereas conversely logs from already registered service undergo the conversion and dispatch procedure and are lastly added to the database with their received Issue ID.
 
+![Service Monitoring Selection in the Monitoring Frontend](https://github.com/ccims/issue-creator/blob/SLADIM-187/documentation/Screenshot%20Monitoring%20Selection%20Frontend.png?raw=true)
 
 ### 4. Saving the Logs in a database
 As mentioned before, the accepted logs, with their received issue ID, will be added in the MongoDB database located at http://localhost:27017/. 
