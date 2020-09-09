@@ -1,8 +1,8 @@
 
 # Error-Response Monitor
 
-The Error Response Monitor is used to monitor services in terms of their application functionality. Different services can be selected to be monitored in the **Monitoring Selection** tab. As soon as a service is registered the Error Response Monitor is able to receive its error reports and convert them into our own [Log Message Format](). These Log messages are visualized for each service and automatically transferred to the Issue Creator in order to either create a new issue out of the Log Message or assign the Log Message to an existing issue. \
-Apart from registering service to automatically send errors to the monitoring system you can also manually check whether different endpoints are available. Furthermore, you can also check for semantical correctness by evaluating whether an endpoint is returning an expected value.
+The Error Response Monitor is used to monitor services in terms of their application functionality. Different services can be selected to be monitored in the **Monitoring Selection** tab. As soon as a service is registered the Error Response Monitor is able to receive its error reports and convert them into our own [Log Message Format](). These Log messages are visualized for each service and automatically inserted into a Kafka Queue which is included in the Error-Response Monitor itself. From this Kafka Queue, the Issue Creator is then able to retrieve the logs created by the Error-Response Monitor. 
+Furthermore, one can also probe for semantical correctness by evaluating whether an endpoint is returning an expected value.
 
 ## Installation and Setup
 
@@ -30,23 +30,7 @@ The Error Response Monitor comes wiht two main features, the first one being abl
 The second main feature is the ability to test for semantical correctnes of http responses by manually sending requests to a specific endpoint. \
 In both features a Log Message is automatically created and sent to the issue creator in case of a detected error. 
 
-## 1. Registering Services to monitor
-
-Go to the **Monitoring Selection** tab in the Monitoring Frontend and click the **Add** button on the top right corner. A new dialog will then pop up. 
-
-![Monitoring selection add service button](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Monitoring_selection_add_service_button.PNG?raw=true)
-
-Enter your own name for this monitoring selection and the URL of the service that is to be monitored. Confirm your setting by clicking the **Save** button. 
-
-![Monitoring selection add service button](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Monitoring_selection_add_service_entries.PNG?raw=true)
-
-The service is now able to send Error reports to the Error Response Monitor and the newly added service is visible in the Monitoring Selection tab. 
-
-![Monitoring selection add service button](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Monitoring_selection_added_service_delete.PNG?raw=true)
-
-A registered service can be removed by clicking the **Delete** button. 
-
-## 2. Checking for semantical correctness
+## 1. Checking for semantical correctness
 
 If you want to manually check if an endpoint is returning correct values go to the **Error Response** tab of the Monitoring Frontend. 
 
@@ -74,7 +58,7 @@ If the returned status code matches the expected one the response body will be s
 
 ![Error Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_POST_log.PNG?raw=true)
 
-## 3. Kafka Queue
+## 2. Kafka Queue
 As mentioned before, the Error-Response Monitor writes logs into a Kafka Queue which is directly coupled to be Monitor itself meaning the Kafka Queue is defined and specified in the Error-Response Monitor and is additionally started with the Monitor upon using Docker Compose. localhost:9092 is the respective url the Kafka Queue. Hence the Error-Response Monitor takes on the role of a producer that connects itself to the Kafka Queue, writes the log into it and lastly disconnects whenever dispatching a log which thereupon is consumed by the Issue Creator. There is one Kafka broker across the Monitoring Environment that specifically is responsible to accommodate these logs. Correspondingly, all logs are classified under the topic of "logs".
 
 ## Additional Information
