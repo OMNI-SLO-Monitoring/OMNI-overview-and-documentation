@@ -10,13 +10,15 @@ Once setup, the Alert Converter is located at localhost:3900, the Prometheus Cli
 
 ## Functionalities
 
-The fundamental functionalities comprise the reception of the Alerts from the Alert Manager. the conversion into logs of the above-mentioned Log Message Format and the insertion into the Kafka Queue for further retrieval. 
+The fundamental functionalities comprise the reception of the Alerts from the Alert Manager. The conversion into logs of the above-mentioned Log Message Format and the insertion into the Kafka Queue for further retrieval. 
 
 ### Receiving and Handling Alerts
+Notice: Alert Rules have to be in a specific format, see [How To Setup Alert Converter](https://github.com/ccims/Prometheus-Alert-Converter/blob/dev/README.md) for more information.
+
 The Alert Converter receives Prometheus Alerts from the Prometheus Alert Manager. These Alerts are created when a certain rule defined in the configuration of the Prometheus Client is violated. As of now, we have defined three rules in total. \
 The first rule is the most important one and it prescribes that the CPU utilization must not exceed 80%. To realize this pulse check approach, the Windows Exporter exposes a /metrics endpoint for the Prometheus Client to scrape. Here, it is crucial to mention that the Windows Exporter measures only the CPU utilization of Windows Systems. In the future, our setup may adopt the Node Exporter which will enable the CPU measurement of Linux Systems. \
 The second rule makes sure that the Alert Converter is indeed up and running, and thus able to receive Alerts. \
-Ultimately, the thrid rule probes the validity of newly created rules. For the Alert Converter to pertain an Alert to the corresponding Log Type however, rules must have names that contains the substring of one of the Log Types from the Log Message Format and the description must be in the form of 'Value = $value'.
+Ultimately, the thrid rule probes the validity of newly created rules. 
 
 Once an active rule has been violated, the Prometheus Client will create an Alert that undergoes a 'Pending' stage before being fired in the 'Firing' stage to the Alert Manager which thereupon transfers the Alert to the Alert Converter. It then extracts the information pertinent to the log based on the Log Message Format from the content of the received Alert and populates the log instance. The created log is then appended to the Kafka Queue under the topic of 'logs' for the Issue Creator to retrieve it.
 
