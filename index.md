@@ -1,7 +1,10 @@
-# Issue-Creating Monitoring for SLA-driven Issue Management System
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/ccims/overview-and-documentation/5d05f85ec278da3a643510fca58b18fab75106af/app_logos/logo_final_12.5p.svg" />
+</p>
 
 ## 1. Introduction
-This User Manual provides an elaborate insight into the Issue-Creating Monitoring of the SLA-driven Issue Management System and the entire environment built around it. Elucidations of the functionality and purpose of the individual components are located in their dedicated chapters. 
+This User Manual provides an elaborate insight into <em><strong>omni</strong></em>, the Issue-Creating Monitoring System of the SLA-driven Issue Management System, and the entire environment built around it. Elucidations of the functionality and purpose of the individual components are located in their dedicated chapters. 
 
 ### Fundamentals
 The Issue-Creating Monitoring System aims to detect errors in a microservice architecture and subsequently creates issues, characterizing very detailed the undesired behaviour. These issues are thereupon sent to a predefined API to be further processed and evaluated. 
