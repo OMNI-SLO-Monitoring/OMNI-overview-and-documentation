@@ -1,7 +1,7 @@
 # CPU Tracking Monitoring Service
 
 The CPU Tracking Monitoring Service is part of the Monitoring System and, as evident by its name, is used to Track the CPU utilization of different services, in particular NestJs services. \
-Services that should be monitored by the CPU Tracking Monitor have to provide a special **/cpu** endpoint. This _cpu_ endpoint is provided by our **CPU utilization Observer** module. If you want to know how to implement this module into your NestJs service follow the [CPU utilization Observer installation steps](). \
+Services that should be monitored by the CPU Tracking Monitor have to provide a special **/cpu** endpoint. This _cpu_ endpoint is provided by our **CPU utilization Observer** module. If you want to know how to implement this module into your NestJs service follow the [CPU utilization Observer installation steps](https://ccims.github.io/overview-and-documentation/cpu-observer-module). \
 The CPU Tracking Monitor is divided into a frontend and a backend part. The frontend can be found in the [Combined Monitoring Frontend](https://github.com/ccims/monitoring-frontend) under the **CPU Utilization** tab, whereas the backend is implemented as its own service.
 
 ## Installation and Setup
