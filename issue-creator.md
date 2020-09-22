@@ -36,7 +36,7 @@ The [Monitoring Frontend](https://github.com/ccims/monitoring-frontend) encompas
 
 For the registration, the URL must conform to the form of the URLs in our environment file. \
 An example URL would look like this: "http://localhost:1234/" \
-Here, "http://" and the last "/" must be included.
+Here, "http://" and the last "/" must be included. If the last "/" is omitted, the Issue Creator will automatically insert "/" at the end. 
 
 ![Service Monitoring Selection in the Monitoring Frontend](https://github.com/ccims/issue-creator/blob/dev/documentation/Screenshot%20Service%20Selection.png?raw=true)
 
