@@ -56,8 +56,9 @@ See [Issue-Creator Chapter](https://ccims.github.io/overview-and-documentation/i
 #### 2.3.2 Formats
 ##### 2.3.2.1 Log Message Format
 See [Log Message Format](https://github.com/ccims/logging-message-format/blob/dev/src/logging-message-format.ts)
+
 ##### 2.3.2.2 Error Format
 See [Error Format](https://github.com/ccims/logging-message-format/blob/dev/src/error-format.ts)
 
-
-
+#### 2.3.2.3 Log Types
+See [Log Types](https://ccims.github.io/overview-and-documentation/logtype)
