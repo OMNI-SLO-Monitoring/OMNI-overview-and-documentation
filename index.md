@@ -1,8 +1,3 @@
-
-<p align="center">
-  <img src="https://raw.githubusercontent.com/ccims/overview-and-documentation/5d05f85ec278da3a643510fca58b18fab75106af/app_logos/logo_final_12.5p.svg" />
-</p>
-
 ## 1. Introduction
 This User Manual provides an elaborate insight into <em><strong>omni</strong></em>, the Issue-Creating Monitoring System of the SLA-driven Issue Management System, and the entire environment built around it. Elucidations of the functionality and purpose of the individual components are located in their dedicated chapters. 
 
