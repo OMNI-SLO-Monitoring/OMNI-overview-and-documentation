@@ -3,7 +3,7 @@
   <img src="https://raw.githubusercontent.com/ccims/overview-and-documentation/c97db39633418d2a0d4e5690a810d62fe5ff5247/app_logos/logo_final_6.25p.svg">
 </p>
 
-# Overview and Documentation
+## Overview and Documentation
 
 Architecture Overview:
 ![Architecture](https://github.com/ccims/overview-and-documentation/blob/master/Architektur%20Gesamtsystem%20Aktuell.jpg?raw=true)
