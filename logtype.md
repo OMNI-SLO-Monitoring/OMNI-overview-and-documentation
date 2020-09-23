@@ -35,5 +35,4 @@ If his service now outputs a semantically different response from the Expected R
   ![Activity Diagramm Error](https://i.gyazo.com/75e33837f116aaf1a37fb2facb5b64d8.png)
 ### 4. CBOpen
 Imagine the Example User working on a system consisting of 2 services and a *Circuit Breaker*, that is set to open at 3 consecutive failures, between them. Our user wants to send a request some data via an HTTP request from 1 service to another. However, the service that is supposed to respond to the request is currently down and thus our impatient example user tries to send more requests which will ultimately timeout. That leads to the Circuit Breaker opening, which will then sends an error message in the [Error Format](https://github.com/ccims/logging-message-format/blob/dev/src/error-format.ts) to our monitoring service which will then be used to create a Log Message with the Log Type **CB_Open**.
-  ![Activity Diagramm CB Open](https://i.gyazo.com/61eeec2fca77d22f95fe2892eddde621.png)
-
+<img src="https://i.gyazo.com/61eeec2fca77d22f95fe2892eddde621.png" width="869" height="300">
