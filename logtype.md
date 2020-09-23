@@ -19,7 +19,7 @@ Imagine a user who wants to work with our registered service to do something. Hi
 ```
 After about an hour of work the user starts getting distracted with texting people on his Laptop and he starts watching some videos, opening tab after tab on his browser; all while this service is running on his Laptop. The Prometheus Client notices the high CPU utilization and sends the alert first to the Prometheus Alert Manager which then sends it to our Alert Converter. The Alert Converter will create a  [Log Message ](https://github.com/ccims/logging-message-format/blob/dev/src/logging-message-format.ts) with the Log Type **CPU** out of the Prometheus Alert. 
 
- <img src="https://i.gyazo.com/ba91c1584d2a8f3b02cc6f1d446a0a75.png" width="1200" height="250">
+ <img src="https://i.gyazo.com/ba91c1584d2a8f3b02cc6f1d446a0a75.png" width="1400" height="250">
 
 
  ![Log Cpu](https://github.com/ccims/overview-and-documentation/blob/master/formats/LogMessageFormat/Example_Logs_model/CPU_Log.png?raw=true)
@@ -27,7 +27,7 @@ After about an hour of work the user starts getting distracted with texting peop
 ### 2. Timeout 
 Our example User once again wants to work with their registered service to do something but this time around he wants to send a get request to another service. However, due to his connection breaking down, the request was timed out. In this case, the service then reports the error in the [Error Format](https://github.com/ccims/logging-message-format/blob/dev/src/error-format.ts) to the Error Response Monitor from which a Log Message with the type **Timeout** will be created. 
 
- <img src="https://i.gyazo.com/4952e1606bab745d1300f5d21c92cf23.png" width="1200" height="250">
+ <img src="https://i.gyazo.com/4952e1606bab745d1300f5d21c92cf23.png" width="1400" height="250">
 
 ![Log Timeout](https://github.com/ccims/overview-and-documentation/blob/master/formats/LogMessageFormat/Example_Logs_model/Timeout_Log.png?raw=true)
 
