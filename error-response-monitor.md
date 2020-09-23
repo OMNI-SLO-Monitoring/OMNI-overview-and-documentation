@@ -19,7 +19,7 @@ The Error-Response Monitor will send received logs to a message queue so the Iss
 This the view of the Error-Response Monitor in the combined monitoring frontend to check for semantical correctness.
 
 Error-Response:
-![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_Response_overall.PNG?raw=true)
+![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_Response_overall.PNG?raw=true)
 
 ## Functionalities
 Aside from receiving error messages from services, a chief feature is the ability to test for semantical correctness of http responses by manually sending requests to a specific endpoint. \
@@ -31,27 +31,27 @@ If you want to manually check if an endpoint is returning correct values go to t
 
 Initially you can see two input fields. First, enter the URL of the endpoint you want to query. After this select whether the request type is an http _GET_ or _POST_ request. More input fields will then appear based on your selection. 
 
-![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_URL_and_type.PNG?raw=true)
+![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_URL_and_type.PNG?raw=true)
 
 ### GET requests:
 We are going to have a look a the _GET_ request first. Enter your expected response when sending a request to this endpoint and click the **Send Request** button to send the request to the given endpoint. If the request is successful the returned value will be shown below the **Your Response** text. 
 
-![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_GET_success.PNG?raw=true)
+![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_GET_success.PNG?raw=true)
 
 In case the request is not succesful or the response does not match the expected value an error text will be shown and a Log Message will automatically be created. This Log Message can be seen within the **Work Check Logs** field. 
 
 
 
-![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_GET_log.PNG?raw=true)
+![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_GET_log.PNG?raw=true)
 
 ### POST requests:
 The process does work similarly when selecting the _POST_ request. Here you need to enter the excpected status code of the response as well as the post body when sending the request. After that the **Send Request** button can be clicked. 
 
-![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_POST_success.PNG?raw=true)
+![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_POST_success.PNG?raw=true)
 
 If the returned status code matches the expected one the response body will be shown below the **Your Response** text. However, if the status codes do not match an error text will be shown and a Log Message will be created which can be seen in the **Work check Logs** field. 
 
-![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/payment-service-monitor/documentation/Pics/Error_response_POST_log.PNG?raw=true)
+![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_POST_log.PNG?raw=true)
 
 ## 2. Kafka Queue
 As mentioned before, the Error-Response Monitor writes logs into a Kafka Queue which is directly coupled to be Monitor itself meaning the Kafka Queue is defined and specified in the Error-Response Monitor and is additionally started with the Monitor upon using Docker Compose. localhost:9092 is the respective url the Kafka Queue. Hence the Error-Response Monitor takes on the role of a producer that connects itself to the Kafka Queue, writes the log into it and lastly disconnects whenever dispatching a log which thereupon is consumed by the Issue Creator. There is one Kafka broker across the Monitoring Environment that specifically is responsible to accommodate these logs. Correspondingly, all logs are classified under the topic of "logs".
