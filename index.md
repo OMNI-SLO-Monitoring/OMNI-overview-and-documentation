@@ -41,7 +41,7 @@ See [Error Response Monitoring Service Chapter](https://ccims.github.io/overview
 See [CPU-Observer-Module Chapter](https://ccims.github.io/overview-and-documentation/cpu-observer-module)
 
 #### 2.2.4 Prometheus Alert Converter
-See [Prometheus-Alert-Converter](https://github.com/ccims/overview-and-documentation/blob/gh-pages/alert-converter.md)
+See [Prometheus-Alert-Converter](https://ccims.github.io/overview-and-documentation/alert-converter)
 
 ### 2.3 Issue Creation 
 The Issue Creator component of <em><strong>omni</strong></em> realizes the module accounting for the issue creation in the system. Dequeueing logs from the message queue and storing them in the database, the Issue Creator converts them into issues and dispatches them. Here, the Log Table visually renders the logs residing in the database of the Issue Creator after retrieval from the message queue.
