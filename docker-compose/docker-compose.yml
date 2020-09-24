@@ -1,0 +1,88 @@
+version: '3.8'
+
+
+services:
+  zookeeper-server:
+    image: 'bitnami/zookeeper:latest'
+    ports:
+      - '2181:2181'
+    environment:
+      - ALLOW_ANONYMOUS_LOGIN=yes
+  kafka-server1:
+    image: 'bitnami/kafka:latest'
+    ports:
+      - '9092:9092'
+    environment:
+      - KAFKA_CFG_ZOOKEEPER_CONNECT=zookeeper-server:2181
+      - KAFKA_CFG_ADVERTISED_LISTENERS=PLAINTEXT://kafka:9092
+      - ALLOW_PLAINTEXT_LISTENER=yes
+    depends_on:
+      - zookeeper-server
+    container_name: kafka
+  db:
+      image: mongo:latest
+      ports:
+        - "27017:27017"
+      container_name: db
+  issue_creator:
+    depends_on:
+      - db
+    build:
+      context: ./issue-creator
+    ports:
+      - '3500:3500'
+    container_name: issue_creator
+  error-response-monitoring-service:
+    build:
+      context: ./error-response-monitoring-service/payment-service-monitor
+    ports:
+      - "3400:3400"
+    container_name: error-response-monitoring-service
+  cpu-tracking-monitoring-service:
+    build:
+      context: ./CPU-tracking-monitoring-service
+    ports:
+      - "3100:3100"
+    container_name: cpu-tracking-monitoring-service
+  monitoring-frontend:
+    build:
+      context: ./monitoring-frontend
+    ports:
+      - "4200:4200"
+    container_name: monitoring-frontend
+  account-service:
+    build:
+      context: ./account-service/account-service-backend
+    ports:
+      - "3200:3200"
+    container_name: account-service
+  account-service-frontend:
+    build:
+      context: ./account-service/frontend
+    ports:
+      - "4100:4100"
+    container_name: account-service-frontend
+  database-service:
+    build:
+      context: ./database-service/database-service
+    ports:
+      - "3000:3000"
+    container_name: database-service
+  database-service-frontend:
+    build:
+      context: ./database-service/database-serviceui
+    ports:
+      - "4000:4000"
+    container_name: database-service-frontend
+  price-service:
+    build:
+      context: ./price-service/priceservice
+    ports:
+      - "3300:3300"
+    container_name: price-service
+  price-service-frontend:
+    build:
+      context: ./price-service/priceserviceui
+    ports:
+      - "4300:4300"
+    container_name: price-service-frontend
