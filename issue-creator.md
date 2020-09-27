@@ -52,4 +52,10 @@ The logs residing in the database can be viewed in the [Monitoring Frontend](htt
 ![Logs in the Monitoring Frontend](https://raw.githubusercontent.com/ccims/issue-creator/dev/documentation/Screenshot%20Monitoring%20Frontend.png)
 
 ### 5. Searching an Issue by ID
-By sending an Issue ID via POST Request to the endpoint /issue, the associated issue will be sent as an response if that issue exists or the error: "The specified ID is no valid node id", if it does not exist prior.
+By sending an Issue ID (as a JSON) via POST Request to the endpoint /issue, the associated issue will be sent as an response if that issue exists or the error: "The specified ID is no valid node id", if it does not exist prior. This is how the post request has to look like.
+
+```json
+{
+    "issueID": "5d32c6b5785df088"
+}
+```
