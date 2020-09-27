@@ -38,7 +38,7 @@ We are going to have a look a the _GET_ request first. Enter your expected respo
 
 ![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_GET_success.PNG?raw=true)
 
-In case the request is not succesful or the response does not match the expected value an error text will be shown and a Log Message will automatically be created. This Log Message can be seen within the **Work Check Logs** field. 
+In case the request is not succesful or the response does not match the expected value an error text will be shown and a Log Message will automatically be created. This Log Message can be seen within the **End-to-End Check Logs** field. 
 
 
 
@@ -49,7 +49,7 @@ The process does work similarly when selecting the _POST_ request. Here you need
 
 ![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_POST_success.PNG?raw=true)
 
-If the returned status code matches the expected one the response body will be shown below the **Your Response** text. However, if the status codes do not match an error text will be shown and a Log Message will be created which can be seen in the **Work check Logs** field. 
+If the returned status code matches the expected one the response body will be shown below the **Your Response** text. However, if the status codes do not match an error text will be shown and a Log Message will be created which can be seen in the **End-to-End Check Logs** field. 
 
 ![Error-Response Overall](https://github.com/ccims/error-response-monitoring-service/blob/dev/documentation/Pics/Error_response_POST_log.PNG?raw=true)
 
