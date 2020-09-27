@@ -4,7 +4,7 @@ The Issue Creator can receive incoming logs and save them in a mongo Database. I
 
 ## Installation and Setup
 [How to set up the Issue Creator](https://github.com/ccims/issue-creator/blob/dev/README.md) \
-[Sandro's API](https://github.com/ccims/ccims-backend/tree/apiMockup) has to run in order to assign an Issue ID (currently the mock up). If logs are send to the issue creator without it running, the log will be saved without the issue ID.
+[The Backend API](https://github.com/ccims/ccims-backend-gql/tree/dev) has to run in order to assign an Issue ID. If logs are send to the issue creator without it running, the log will be saved without the issue ID.
 It is also crucial to mention that the Issue Creator works only in conjunction with the Kafka Queue which is in turn coupled to the Error-Response Monitor, meaning the Error-Response Monitor must be up and running with the Kafka Queue, achievable by using Docker compose (for more see [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor)) alongside the Issue Creator. They are hence important dependencies of the Issue Creator for it automatically connects to the Kafka Queue and consumes the content upon initialization.
 
 
@@ -26,7 +26,12 @@ It is also crucial to mention that the Issue Creator works only in conjunction w
 Endpoint for sending the Log Message \
   Successful response: Returns: "Received!" and the received API response on the console\
   Erroneous response: Rejects the request.
-  
+
+* **/issue** \
+Endpoint for requesting an Issue with an Issue ID \
+Successful response: Returns: The issue with a corresponding Issue and its data
+Erroneous response: Rejects the request or send an error back if the Issue ID does not have an associated issue
+
 ### 2. Creating an Issue and sending it to the API
 The Issue Creator encompasses a Log Receiver component which upon initialisation connects to the Kafka Queue described and intialized in the [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor) and subscribes to the the topic of "logs" under which all logs are classified. Taking on the role as a consumer, it will then consistently retrieve existing logs of the Kafka Queue. 
 Out of the incoming log, the issue creator creates an Issue in the [issue format]( https://github.com/ccims/issue-creator/blob/dev/src/IssueFormat.ts) provided by the [graphql schema](https://github.com/ccims/ccims-backend/blob/schemas/schemas/schema.graphql) . The Issue contains all the information of the Log message and is sent to the API by the Issue Creator. If the request was successful it receives an Issue ID from the API which can be assigned to the associated log. 
@@ -45,3 +50,6 @@ As mentioned before, the accepted logs, with their received issue ID, will be ad
 The logs residing in the database can be viewed in the [Monitoring Frontend](https://github.com/ccims/monitoring-frontend) in the Log Table View by clicking on **Logs**. Here currently viewed without the Issue ID. In order to view the Issue ID, send a GET request to the Issue Creator. 
 
 ![Logs in the Monitoring Frontend](https://raw.githubusercontent.com/ccims/issue-creator/dev/documentation/Screenshot%20Monitoring%20Frontend.png)
+
+### 5. Searching an Issue by ID
+By sending an Issue ID via POST Request to the endpoint /issue, the associated issue will be sent as an response if that issue exists or the error: "The specified ID is no valid node id", if it does not exist prior.
