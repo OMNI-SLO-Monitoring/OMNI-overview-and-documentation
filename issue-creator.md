@@ -21,16 +21,18 @@ It is also crucial to mention that the Issue Creator works only in conjunction w
   Successful response: Returns all logs associated to the id of a service \
   Erroneous response: Rejects the request.
 
+* **/issue/:id** \
+Endpoint for requesting an Issue with an Issue ID \
+Successful response: Returns: The issue with a corresponding Issue and its data
+Erroneous response: Rejects the request or send an error back if the Issue ID does not have an associated issue  
+
 #### POST endpoints:  
 * **/** \
 Endpoint for sending the Log Message \
   Successful response: Returns: "Received!" and the received API response on the console\
   Erroneous response: Rejects the request.
 
-* **/issue** \
-Endpoint for requesting an Issue with an Issue ID \
-Successful response: Returns: The issue with a corresponding Issue and its data
-Erroneous response: Rejects the request or send an error back if the Issue ID does not have an associated issue
+
 
 ### 2. Creating an Issue and sending it to the API
 The Issue Creator encompasses a Log Receiver component which upon initialisation connects to the Kafka Queue described and intialized in the [Error-Response Monitor Chapter](https://ccims.github.io/overview-and-documentation/error-response-monitor) and subscribes to the the topic of "logs" under which all logs are classified. Taking on the role as a consumer, it will then consistently retrieve existing logs of the Kafka Queue. 
@@ -52,10 +54,6 @@ The logs residing in the database can be viewed in the [Monitoring Frontend](htt
 ![Logs in the Monitoring Frontend](https://raw.githubusercontent.com/ccims/issue-creator/dev/documentation/Screenshot%20Monitoring%20Frontend.png)
 
 ### 5. Searching an Issue by ID
-By sending an Issue ID (as a JSON) via POST Request to the endpoint /issue, the associated issue will be sent as an response if that issue exists or the error: "The specified ID is no valid node id", if it does not exist prior. This is how the post request has to look like.
+By sending a GET request to the endpoint: **/issue/:id** the issue associated with the given ID will be sent as a response if that issue exists. If the ID does not have an associated issue the error: "The specified ID is no valid node id" and a status code 500 will be returned.
 
-```json
-{
-    "issueID": "5d32c6b5785df088"
-}
-```
+
